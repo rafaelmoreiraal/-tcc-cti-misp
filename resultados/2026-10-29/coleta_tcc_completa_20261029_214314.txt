@@ -1,0 +1,136 @@
+COLETA DO LABORATORIO - 2026-10-29 21:43:14
+============================================================
+
+[1] AMBIENTE
+  Sistema (WSL): Ubuntu 24.04.5 LTS
+  Kernel: 5.15.146.1-microsoft-standard-WSL2
+  Processador: 11th Gen Intel(R) Core(TM) i3-1115G4 @ 3.00GHz
+  Nucleos logicos visiveis: 4
+  Memoria total do WSL (MB): 5821
+  Memoria disponivel agora (MB): 2808
+  Swap total (MB): 2048
+  Windows (ver): 
+  WSL (--version): 
+  .wslconfig: (nao encontrado: WSL usa os limites padrao)
+  MISP: 2.5.48
+  misp-dashboard (commit): 3c11250 2023-04-26
+  Apache: Server version: Apache/2.4.58 (Ubuntu)
+  MariaDB: mariadb  Ver 15.1 Distrib 10.11.14-MariaDB, for debian-linux-gnu (x86_64) using  EditLine wrapper
+  Redis: Redis server v=7.0.15 sha=00000000:0 malloc=jemalloc-5.3.0 bits=64 build=d064f9f48c901a92
+  PHP: PHP 8.3.6 (cli) (built: Oct 19 2026 15:16:58) (NTS)
+  Python: Python 3.12.3
+  Uso de disco: 970M	/var/lib/mysql
+2.3G	/var/www/MISP
+208M	/var/www/misp-dashboard
+
+[2] CONSUMO DOS SERVICOS (memoria residente, MB)
+  Apache (interface web do MISP): 607
+  MariaDB (banco): 1405
+  Redis: 148
+  Workers do MISP (PHP): 870
+  ZeroMQ do MISP: 39
+  misp-dashboard: 400
+  Supervisor: 29
+  TOTAL dos servicos do laboratorio: 3498
+  Memoria em uso no WSL (MB): 3042
+  Memoria total do WSL (MB): 5821
+  CPU ocupada (media de 5 s, %): 0.1
+  Carga media (1/5/15 min): 0.36 0.32 0.18
+
+[3] MISP
+  Versao (API): 2.5.48
+
+  Feeds configurados:
+    - Tor exit nodes | TOR Node List from dan.me.uk - careful, this feed applies a lock-out after each pull. This is shared with the "Tor ALL nodes" feed. | formato csv | ativo=True | cache=False
+    - Tor ALL nodes | TOR Node List from dan.me.uk - careful, this feed applies a lock-out after each pull. This is shared with the "Tor exit nodes" feed. | formato csv | ativo=True | cache=False
+    - Feodo IP Blocklist | abuse.ch | formato csv | ativo=True | cache=False
+    - OpenPhish url list | openphish.com | formato freetext | ativo=True | cache=False
+    - firehol_level1 | iplists.firehol.org | formato freetext | ativo=True | cache=False
+    - IPs from High-Confidence DGA-Based C&Cs Actively Resolving - requires a valid license | osint.bambenekconsulting.com | formato csv | ativo=True | cache=False
+    - Domains from High-Confidence DGA-based C&C Domains Actively Resolving | osint.bambenekconsulting.com | formato csv | ativo=True | cache=False
+    - ci-badguys.txt | cinsscore.com | formato freetext | ativo=True | cache=False
+    - alienvault reputation generic | .alienvault.com | formato csv | ativo=True | cache=False
+    - blocklist.de/lists/all.txt | blocklist.de | formato freetext | ativo=True | cache=False
+    - sshpwauth.txt | dataplane.org | formato csv | ativo=False | cache=False
+    - sipregistration | dataplane.org | formato csv | ativo=False | cache=False
+    - sipquery | dataplane.org | formato csv | ativo=False | cache=False
+    - sipinvitation | dataplane.org | formato csv | ativo=False | cache=False
+    - All current domains belonging to known malicious DGAs | osint.bambenekconsulting.com | formato csv | ativo=False | cache=False
+    - VXvault - URL List | VXvault | formato freetext | ativo=False | cache=False
+    - abuse.ch SSL IPBL | abuse.ch | formato csv | ativo=False | cache=False
+    - http://cybercrime-tracker.net hashlist | http://cybercrime-tracker.net hashlist | formato freetext | ativo=False | cache=False
+    - http://cybercrime-tracker.net gatelist | http://cybercrime-tracker.net gatelist | formato freetext | ativo=False | cache=False
+    - blocklist.greensnow.co | greensnow.co | formato csv | ativo=False | cache=False
+    - This list contains all domains - A list for administrators to prevent mining in networks | ZeroDot1 - CoinBlockerLists | formato freetext | ativo=False | cache=False
+    - This list contains all optional domains - An additional list for administrators | ZeroDot1 - CoinBlockerLists | formato freetext | ativo=False | cache=False
+    - This list contains all browser mining domains - A list to prevent browser mining only | ZeroDot1 - CoinBlockerLists | formato freetext | ativo=False | cache=False
+    - URLHaus Malware URLs | abuse.ch | formato csv | ativo=False | cache=False
+    - ipspamlist | ipspamlist | formato csv | ativo=False | cache=False
+    - malsilo.url | MalSilo | formato csv | ativo=False | cache=False
+    - malsilo.ipv4 | MalSilo | formato csv | ativo=False | cache=False
+    - malsilo.domain | MalSilo | formato csv | ativo=False | cache=False
+    - malshare.com - current all | malshare.com | formato freetext | ativo=False | cache=False
+    - Panels Tracker | Benkow.cc | formato csv | ativo=False | cache=False
+    - IPsum (aggregation of all feeds) - level 1 - lot of false positives | IPsum | formato freetext | ativo=False | cache=False
+    - IPsum (aggregation of all feeds) - level 2 - medium false positives | IPsum | formato freetext | ativo=False | cache=False
+    - IPsum (aggregation of all feeds) - level 3 - low false positives | IPsum | formato freetext | ativo=False | cache=False
+    - IPsum (aggregation of all feeds) - level 4 - very low false positives | IPsum | formato freetext | ativo=False | cache=False
+    - IPsum (aggregation of all feeds) - level 5 - ultra false positives | IPsum | formato freetext | ativo=False | cache=False
+    - IPsum (aggregation of all feeds) - level 6 - no false positives | IPsum | formato freetext | ativo=False | cache=False
+    - IPsum (aggregation of all feeds) - level 7 - no false positives | IPsum | formato freetext | ativo=False | cache=False
+    - IPsum (aggregation of all feeds) - level 8 - no false positives | IPsum | formato freetext | ativo=False | cache=False
+    - Metasploit exploits with CVE assigned | eCrimeLabs | formato csv | ativo=False | cache=False
+    - Malware Bazaar | abuse.ch | formato csv | ativo=False | cache=False
+    - PhishScore | PhishStats | formato csv | ativo=False | cache=False
+    - Threatfox | abuse.ch | formato misp | ativo=False | cache=False
+    - URL Seen in honeypots | APNIC Community Honeynet Project | formato freetext | ativo=False | cache=False
+    - SSH Bruteforce IPs | APNIC Community Honeynet Project | formato csv | ativo=False | cache=False
+    - Telnet Bruteforce IPs | APNIC Community Honeynet Project | formato csv | ativo=False | cache=False
+    - threatfox indicators of compromise | abuse.ch | formato csv | ativo=False | cache=False
+    - List of malicious domains in Poland | CERT-PL | formato freetext | ativo=False | cache=False
+    - Threatview.io - OSINT Threat Feed | threatview.io | formato freetext | ativo=False | cache=False
+    - Threatview.io - C2 Hunt Feed | threatview.io | formato csv | ativo=False | cache=False
+    - Threatview.io - IP Blocklist | threatview.io | formato freetext | ativo=False | cache=False
+    - Threatview.io - Domain Blocklist | threatview.io | formato freetext | ativo=False | cache=False
+    - Threatview.io - MD5 Hash Blocklist | threatview.io | formato freetext | ativo=False | cache=False
+    - Threatview.io - URL Blocklist | threatview.io | formato freetext | ativo=False | cache=False
+    - Threatview.io - Bitcoin Address Intel | threatview.io | formato freetext | ativo=False | cache=False
+    - Threatview.io - SHA File Hash Blocklist | threatview.io | formato freetext | ativo=False | cache=False
+    - Rösti - Repackaged Öpen Source Threat Intelligence | bin.re | formato misp | ativo=False | cache=False
+    - hideNseek LAB - Threat Intelligence JSON | hideNseek LAB | formato freetext | ativo=False | cache=False
+    - hideNseek LAB - CSV Threat Feed | hideNseek LAB | formato csv | ativo=False | cache=False
+    - hideNseek LAB - IP Blocklist | hideNseek LAB | formato freetext | ativo=False | cache=False
+    - Rectifyq - Curated Enriched MISP Threat Information for 2024 | rectifyq.com | formato misp | ativo=False | cache=False
+    - Rectifyq - Curated Enriched MISP Threat Information for 2025 | rectifyq.com | formato misp | ativo=False | cache=False
+    - Rectifyq - Curated Enriched MISP Threat Information for 2026 | rectifyq.com | formato misp | ativo=False | cache=False
+    - Rectifyq - Curated Enriched MISP Threat Information for ICS-OT | rectifyq.com | formato misp | ativo=False | cache=False
+    - Rectifyq - Curated Enriched MISP Threat Information relevant for Malaysian Context | rectifyq.com | formato misp | ativo=False | cache=False
+    - PrecisionSec OSINT Threat Intelligence | precisionsec.com | formato misp | ativo=False | cache=False
+    - SiberKapan | siberkapan.org | formato misp | ativo=False | cache=False
+    - Threatbase (IP feed) | threatbase.qzz.io | formato freetext | ativo=False | cache=False
+    - Threatbase (Domain feed) | threatbase.qzz.io | formato freetext | ativo=False | cache=False
+    - Threatbase (URL feed) | threatbase.qzz.io | formato freetext | ativo=False | cache=False
+    - Threatbase (File hash feed) | threatbase.qzz.io | formato freetext | ativo=False | cache=False
+
+  Eventos: 6 | Atributos: 1582
+
+  Por fonte (organizacao criadora):
+    - CthulhuSPRL.be: 1 eventos, 986 atributos (Dominio/host 35, Hash 947, Outros 4); to_ids=982; em warninglist=0; atributos modificados entre 2015-07-28 e 2016-02-24
+    - CIRCL: 4 eventos, 571 atributos (Dominio/host 6, Hash 341, IP 11, Outros 203, URL 10); to_ids=375; em warninglist=1; atributos modificados entre 2016-03-28 e 2025-03-06
+    - Krawczyk Industries Limited: 1 eventos, 25 atributos (Dominio/host 7, IP 7, URL 11); to_ids=14; em warninglist=0; atributos modificados entre 2026-08-14 e 2026-08-14
+
+  Valores de rede distintos (IP, dominio, URL): 87
+  Valores presentes em 2 ou mais fontes: 0
+  Valores presentes em 2 ou mais eventos: 0
+  Sobreposicao por par de fontes: {}
+  Suporte a includeWarninglistHits: True
+  Warninglists mais frequentes: {'Top 10K most-used sites from Tranco': 1}
+  Tempo de consulta a API (ms): {'n': 30, 'media': 83.9, 'mediana': 83.4, 'minimo': 78.3, 'maximo': 93.8}
+
+  Eventos (id | data | fonte | atributos | titulo):
+    1 | 2026-08-13 | Krawczyk Industries Limited | 25 | Maltrail IOC for 2026-08-14
+    2 | 2024-12-02 | CIRCL | 489 | Kinsing cryptomining exploiting Erlang service
+    3 | 2020-01-24 | CIRCL | 15 | OSINT - First Node.js-based Ransomware : Nodera
+    10 | 2015-07-28 | CthulhuSPRL.be | 986 | OSINT Black Vine: Formidable cyberespionage group targeted aerospace, healthcare since 2012 by Symantec
+    11 | 2016-03-28 | CIRCL | 54 | OSINT - TREASUREHUNT: A CUSTOM POS MALWARE TOOL
+    14 | 2016-03-28 | CIRCL | 13 | OSINT - Malware Employs PowerShell to Infect Systems

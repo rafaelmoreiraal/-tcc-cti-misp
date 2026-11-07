@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "Se usar este material, cite o TCC e este repositório."
+title: "Teste de correlação de IoCs com o MISP: scripts e dados do TCC"
+type: software
+authors:
+  - given-names: "Rafael Moreira"
+    name-particle: "de"
+    family-names: "Lana"
+license: MIT
+keywords:
+  - MISP
+  - cyber threat intelligence
+  - indicadores de comprometimento
+  - correlação

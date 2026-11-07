@@ -1,0 +1,144 @@
+TESTE DE CORRELACAO DE EVENTOS DE REDE COM IOCS - 2026-10-29 21:43:48
+========================================================================
+MISP: https://misp.local (versao 2.5.48)
+Regra de decisao (definida antes do teste): o evento e considerado correlacionado quando a
+consulta retorna ao menos um atributo; na estrategia C, quando ao menos um atributo
+retornado tem to_ids e nao esta em warninglist.
+Nenhum IP, dominio ou URL foi acessado: as consultas comparam valores dentro do MISP.
+
+[1] CONJUNTO DE TESTE
+  Indicadores de rede com to_ids no MISP: 76 (IP 18, Dominio 48, URL 10)
+  Eventos simulados: 74
+    - positivo exato: 20 (IP 7, Dominio 7, URL 6)
+    - positivo com variacao: 20 (IP 7, Dominio 7, URL 6)
+    - negativo: 34 (IP 10, Dominio 20, URL 4)
+        variacao 'IP com porta': 7
+        variacao 'URL com host em maiusculas': 6
+        variacao 'dominio dentro de URL': 3
+        variacao 'nome DNS em maiusculas com ponto final': 4
+
+[2] RESULTADOS POR ESTRATEGIA (somente eventos rotulados)
+  Estrategia                                   VP   FP   FN   VN   Precisao  Revocacao
+  A - exata                                     26    0   14   34    100.0%     65.0%
+  B - normalizada                               40    0    0   34    100.0%    100.0%
+  C - normalizada + filtros (to_ids e WL)       38    0    2   34    100.0%     95.0%
+
+[3] REVOCACAO POR GRUPO E TIPO DE VARIACAO (corretos / total)
+  positivo exato                                       A 20/20  B 20/20  C 19/20
+  variacao: IP com porta                               A 0/7  B 7/7  C 7/7
+  variacao: URL com host em maiusculas                 A 6/6  B 6/6  C 6/6
+  variacao: dominio dentro de URL                      A 0/3  B 3/3  C 2/3
+  variacao: nome DNS em maiusculas com ponto final     A 0/4  B 4/4  C 4/4
+  negativos sem correspondencia (VN)                   A 34/34  B 34/34  C 34/34
+
+[4] ERROS (falsos positivos e falsos negativos)
+  E017 | positivo exato | - | logmeinrescue.us.com | FN em C | correspondencia em B: evento 11 (CIRCL), hostname, to_ids=S, WL: Top 10K most-used sites from Tranco
+  E021 | positivo com variacao | IP com porta | 91.202.233.104:443 | FN em A | correspondencia em B: evento 1 (Krawczyk Industries Limited), ip-dst, to_ids=S
+  E022 | positivo com variacao | nome DNS em maiusculas com ponto final | GIFAS.BLOGSITE.ORG. | FN em A | correspondencia em B: evento 10 (CthulhuSPRL.be), hostname, to_ids=S
+  E024 | positivo com variacao | IP com porta | 78.153.140.60:80 | FN em A | correspondencia em B: evento 2 (CIRCL), ip-dst, to_ids=S
+  E025 | positivo com variacao | dominio dentro de URL | http://prennera.com/index.php | FN em A | correspondencia em B: evento 10 (CthulhuSPRL.be), domain, to_ids=S
+  E027 | positivo com variacao | IP com porta | 193.24.123.69:8080 | FN em A | correspondencia em B: evento 1 (Krawczyk Industries Limited), ip-dst, to_ids=S
+  E028 | positivo com variacao | nome DNS em maiusculas com ponto final | CAREF1RST.COM. | FN em A | correspondencia em B: evento 10 (CthulhuSPRL.be), domain, to_ids=S
+  E030 | positivo com variacao | IP com porta | 78.153.140.199:53 | FN em A | correspondencia em B: evento 2 (CIRCL), ip-dst, to_ids=S
+  E031 | positivo com variacao | dominio dentro de URL | http://vpn.we11point.com/index.php | FN em A | correspondencia em B: evento 10 (CthulhuSPRL.be), hostname, to_ids=S
+  E033 | positivo com variacao | IP com porta | 194.38.20.2:22 | FN em A | correspondencia em B: evento 2 (CIRCL), ip-dst, to_ids=S
+  E034 | positivo com variacao | nome DNS em maiusculas com ponto final | CAREFLRST.COM. | FN em A | correspondencia em B: evento 10 (CthulhuSPRL.be), domain, to_ids=S
+  E036 | positivo com variacao | IP com porta | 37.77.150.95:443 | FN em A | correspondencia em B: evento 1 (Krawczyk Industries Limited), ip-dst, to_ids=S
+  E037 | positivo com variacao | dominio dentro de URL | http://logmeinrescue.us.com/index.php | FN em A, FN em C | correspondencia em B: evento 11 (CIRCL), hostname, to_ids=S, WL: Top 10K most-used sites from Tranco
+  E039 | positivo com variacao | IP com porta | 91.232.29.83:80 | FN em A | correspondencia em B: evento 11 (CIRCL), ip-dst, to_ids=S
+  E040 | positivo com variacao | nome DNS em maiusculas com ponto final | SSL-VAIT.COM. | FN em A | correspondencia em B: evento 10 (CthulhuSPRL.be), domain, to_ids=S
+
+[5] WARNINGLISTS
+  Negativos presentes em alguma warninglist ativa: 30 de 34
+    - Top 10K most-used sites from Tranco: 23
+    - Top 5,000 domains from Cloudflare Radar: 16
+    - List of known IPv4 public DNS resolvers: 6
+    - List of RFC 5735 CIDR blocks: 4
+    - List of RFC 1918 CIDR blocks: 3
+  Positivos presentes em alguma warninglist ativa: 2
+  Correspondencias (estrategia B) marcadas por warninglist: 2
+
+[6] CONTEXTO DAS CORRESPONDENCIAS (estrategia B, positivos)
+  Atributos correspondentes: 50; por fonte: CIRCL 32, CthulhuSPRL.be 12, Krawczyk Industries Limited 6
+  Data dos eventos de origem: de 2015-07-28 a 2026-08-13
+  Correspondencias com indicador de evento com mais de 1 ano: 44 de 50
+
+[8] TEMPO DE CONSULTA A API (ms por evento)
+  A - exata: media 79.9 | mediana 75.8 | min 68.9 | max 127.7 (n=74)
+  B - normalizada (uma consulta com todas as formas): media 86.2 | mediana 79.0 | min 69.7 | max 137.2 (n=74)
+
+[9] DETALHE DOS EVENTOS ROTULADOS (S = correlacionou; N = nao)
+  E001 | positivo exato        | IP      | 91.202.233.104 | A=S B=S C=S
+  E002 | positivo exato        | Dominio | gifas.blogsite.org | A=S B=S C=S
+  E003 | positivo exato        | URL     | 179.43.160.34/wp-content/temp/gate.php | A=S B=S C=S
+  E004 | positivo exato        | IP      | 78.153.140.60 | A=S B=S C=S
+  E005 | positivo exato        | Dominio | prennera.com | A=S B=S C=S
+  E006 | positivo exato        | URL     | http://anonfile.xyz/f/7f58d7dddec4b72bab0fb27cd852593e.exe | A=S B=S C=S
+  E007 | positivo exato        | IP      | 193.24.123.69 | A=S B=S C=S
+  E008 | positivo exato        | Dominio | caref1rst.com | A=S B=S C=S
+  E009 | positivo exato        | URL     | millionjam.eu/megastock/gate.php | A=S B=S C=S
+  E010 | positivo exato        | IP      | 78.153.140.199 | A=S B=S C=S
+  E011 | positivo exato        | Dominio | vpn.we11point.com | A=S B=S C=S
+  E012 | positivo exato        | URL     | seatrip888.eu/gate.php | A=S B=S C=S
+  E013 | positivo exato        | IP      | 194.38.20.2 | A=S B=S C=S
+  E014 | positivo exato        | Dominio | careflrst.com | A=S B=S C=S
+  E015 | positivo exato        | URL     | 91.232.29.83/sdfsgsdsdssdf/gate.php | A=S B=S C=S
+  E016 | positivo exato        | IP      | 37.77.150.95 | A=S B=S C=S
+  E017 | positivo exato        | Dominio | logmeinrescue.us.com | A=S B=S C=N
+  E018 | positivo exato        | URL     | friltopyes.com/nothcal/gate.php | A=S B=S C=S
+  E019 | positivo exato        | IP      | 91.232.29.83 | A=S B=S C=S
+  E020 | positivo exato        | Dominio | ssl-vait.com | A=S B=S C=S
+  E021 | positivo com variacao | IP      | 91.202.233.104:443 | A=N B=S C=S
+  E022 | positivo com variacao | Dominio | GIFAS.BLOGSITE.ORG. | A=N B=S C=S
+  E023 | positivo com variacao | URL     | 179.43.160.34/wp-content/temp/gate.php | A=S B=S C=S
+  E024 | positivo com variacao | IP      | 78.153.140.60:80 | A=N B=S C=S
+  E025 | positivo com variacao | Dominio | http://prennera.com/index.php | A=N B=S C=S
+  E026 | positivo com variacao | URL     | http://ANONFILE.XYZ/f/7f58d7dddec4b72bab0fb27cd852593e.exe | A=S B=S C=S
+  E027 | positivo com variacao | IP      | 193.24.123.69:8080 | A=N B=S C=S
+  E028 | positivo com variacao | Dominio | CAREF1RST.COM. | A=N B=S C=S
+  E029 | positivo com variacao | URL     | MILLIONJAM.EU/megastock/gate.php | A=S B=S C=S
+  E030 | positivo com variacao | IP      | 78.153.140.199:53 | A=N B=S C=S
+  E031 | positivo com variacao | Dominio | http://vpn.we11point.com/index.php | A=N B=S C=S
+  E032 | positivo com variacao | URL     | SEATRIP888.EU/gate.php | A=S B=S C=S
+  E033 | positivo com variacao | IP      | 194.38.20.2:22 | A=N B=S C=S
+  E034 | positivo com variacao | Dominio | CAREFLRST.COM. | A=N B=S C=S
+  E035 | positivo com variacao | URL     | 91.232.29.83/sdfsgsdsdssdf/gate.php | A=S B=S C=S
+  E036 | positivo com variacao | IP      | 37.77.150.95:443 | A=N B=S C=S
+  E037 | positivo com variacao | Dominio | http://logmeinrescue.us.com/index.php | A=N B=S C=N
+  E038 | positivo com variacao | URL     | FRILTOPYES.COM/nothcal/gate.php | A=S B=S C=S
+  E039 | positivo com variacao | IP      | 91.232.29.83:80 | A=N B=S C=S
+  E040 | positivo com variacao | Dominio | SSL-VAIT.COM. | A=N B=S C=S
+  E041 | negativo              | IP      | 8.8.8.8 | A=N B=N C=N
+  E042 | negativo              | IP      | 8.8.4.4 | A=N B=N C=N
+  E043 | negativo              | IP      | 1.1.1.1 | A=N B=N C=N
+  E044 | negativo              | IP      | 1.0.0.1 | A=N B=N C=N
+  E045 | negativo              | IP      | 9.9.9.9 | A=N B=N C=N
+  E046 | negativo              | IP      | 208.67.222.222 | A=N B=N C=N
+  E047 | negativo              | IP      | 192.168.0.1 | A=N B=N C=N
+  E048 | negativo              | IP      | 192.168.1.1 | A=N B=N C=N
+  E049 | negativo              | IP      | 10.0.0.1 | A=N B=N C=N
+  E050 | negativo              | IP      | 127.0.0.1 | A=N B=N C=N
+  E051 | negativo              | Dominio | google.com | A=N B=N C=N
+  E052 | negativo              | Dominio | www.google.com | A=N B=N C=N
+  E053 | negativo              | Dominio | microsoft.com | A=N B=N C=N
+  E054 | negativo              | Dominio | windowsupdate.com | A=N B=N C=N
+  E055 | negativo              | Dominio | wikipedia.org | A=N B=N C=N
+  E056 | negativo              | Dominio | youtube.com | A=N B=N C=N
+  E057 | negativo              | Dominio | whatsapp.com | A=N B=N C=N
+  E058 | negativo              | Dominio | instagram.com | A=N B=N C=N
+  E059 | negativo              | Dominio | github.com | A=N B=N C=N
+  E060 | negativo              | Dominio | ubuntu.com | A=N B=N C=N
+  E061 | negativo              | Dominio | gov.br | A=N B=N C=N
+  E062 | negativo              | Dominio | www.gov.br | A=N B=N C=N
+  E063 | negativo              | Dominio | uol.com.br | A=N B=N C=N
+  E064 | negativo              | Dominio | globo.com | A=N B=N C=N
+  E065 | negativo              | Dominio | mercadolivre.com.br | A=N B=N C=N
+  E066 | negativo              | Dominio | bb.com.br | A=N B=N C=N
+  E067 | negativo              | Dominio | office.com | A=N B=N C=N
+  E068 | negativo              | Dominio | cloudflare.com | A=N B=N C=N
+  E069 | negativo              | Dominio | unifagoc.edu.br | A=N B=N C=N
+  E070 | negativo              | Dominio | misp-project.org | A=N B=N C=N
+  E071 | negativo              | URL     | https://www.google.com/ | A=N B=N C=N
+  E072 | negativo              | URL     | https://www.gov.br/pt-br | A=N B=N C=N
+  E073 | negativo              | URL     | https://github.com/MISP/MISP | A=N B=N C=N
+  E074 | negativo              | URL     | https://www.unifagoc.edu.br/ | A=N B=N C=N

@@ -1,0 +1,38 @@
+COLETA DO LABORATORIO - 2026-10-24 19:42:30
+============================================================
+
+[1] AMBIENTE
+  Sistema (WSL): Ubuntu 24.04.5 LTS
+  Kernel: 5.15.146.1-microsoft-standard-WSL2
+  Processador: 11th Gen Intel(R) Core(TM) i3-1115G4 @ 3.00GHz
+  Nucleos logicos visiveis: 4
+  Memoria total do WSL (MB): 5821
+  Memoria disponivel agora (MB): 2904
+  Swap total (MB): 2048
+  Windows (ver): 
+  WSL (--version): 
+  .wslconfig: (nao encontrado: WSL usa os limites padrao)
+  MISP: 2.5.48
+  misp-dashboard (commit): 3c11250 2023-04-26
+  Apache: Server version: Apache/2.4.58 (Ubuntu)
+  MariaDB: mariadb  Ver 15.1 Distrib 10.11.14-MariaDB, for debian-linux-gnu (x86_64) using  EditLine wrapper
+  Redis: Redis server v=7.0.15 sha=00000000:0 malloc=jemalloc-5.3.0 bits=64 build=d064f9f48c901a92
+  PHP: PHP 8.3.6 (cli) (built: Sep  2 2026 12:56:02) (NTS)
+  Python: Python 3.12.3
+  Uso de disco: 961M	/var/lib/mysql
+2.3G	/var/www/MISP
+210M	/var/www/misp-dashboard
+
+[2] CONSUMO DOS SERVICOS (memoria residente, MB)
+  Apache (interface web do MISP): 440
+  MariaDB (banco): 1375
+  Redis: 64
+  Workers do MISP (PHP): 864
+  ZeroMQ do MISP: 38
+  misp-dashboard: 420
+  Supervisor: 28
+  TOTAL dos servicos do laboratorio: 3229
+  Memoria em uso no WSL (MB): 2925
+  Memoria total do WSL (MB): 5821
+  CPU ocupada (media de 5 s, %): 26.8
+  Carga media (1/5/15 min): 0.08 0.04 0.01

@@ -1,0 +1,75 @@
+﻿id;grupo;variacao;categoria;evento_simulado;observavel;indicador;rotulo;A;B;C;ms_A;ms_B;eventos;fontes;to_ids;warninglists_correspondencia;warninglists_observavel
+E001;positivo exato;-;IP;conexao 192.168.0.10 -> 91.202.233.104;91.202.233.104;91.202.233.104;malicioso;S;S;S;127.7;114.5;1;Krawczyk Industries Limited;S;;
+E002;positivo exato;-;Dominio;consulta DNS gifas.blogsite.org;gifas.blogsite.org;gifas.blogsite.org;malicioso;S;S;S;76.8;79.2;10;CthulhuSPRL.be;S;;
+E003;positivo exato;-;URL;HTTP GET 179.43.160.34/wp-content/temp/gate.php;179.43.160.34/wp-content/temp/gate.php;179.43.160.34/wp-content/temp/gate.php;malicioso;S;S;S;84.0;122.1;11;CIRCL;S S;;
+E004;positivo exato;-;IP;conexao 192.168.0.10 -> 78.153.140.60;78.153.140.60;78.153.140.60;malicioso;S;S;S;106.1;101.4;2;CIRCL;S;;
+E005;positivo exato;-;Dominio;consulta DNS prennera.com;prennera.com;prennera.com;malicioso;S;S;S;79.7;80.2;10;CthulhuSPRL.be;S;;
+E006;positivo exato;-;URL;HTTP GET http://anonfile.xyz/f/7f58d7dddec4b72bab0fb27cd852593e.exe;http://anonfile.xyz/f/7f58d7dddec4b72bab0fb27cd852593e.exe;http://anonfile.xyz/f/7f58d7dddec4b72bab0fb27cd852593e.exe;malicioso;S;S;S;89.4;78.5;14;CIRCL;S;;
+E007;positivo exato;-;IP;conexao 192.168.0.10 -> 193.24.123.69;193.24.123.69;193.24.123.69;malicioso;S;S;S;104.9;100.2;1;Krawczyk Industries Limited;S;;
+E008;positivo exato;-;Dominio;consulta DNS caref1rst.com;caref1rst.com;caref1rst.com;malicioso;S;S;S;75.1;83.5;10;CthulhuSPRL.be;S;;
+E009;positivo exato;-;URL;HTTP GET millionjam.eu/megastock/gate.php;millionjam.eu/megastock/gate.php;millionjam.eu/megastock/gate.php;malicioso;S;S;S;81.2;77.8;11;CIRCL;S S;;
+E010;positivo exato;-;IP;conexao 192.168.0.10 -> 78.153.140.199;78.153.140.199;78.153.140.199;malicioso;S;S;S;104.2;112.2;2;CIRCL;S;;
+E011;positivo exato;-;Dominio;consulta DNS vpn.we11point.com;vpn.we11point.com;vpn.we11point.com;malicioso;S;S;S;79.0;95.8;10;CthulhuSPRL.be;S;;
+E012;positivo exato;-;URL;HTTP GET seatrip888.eu/gate.php;seatrip888.eu/gate.php;seatrip888.eu/gate.php;malicioso;S;S;S;77.9;76.1;11;CIRCL;S S;;
+E013;positivo exato;-;IP;conexao 192.168.0.10 -> 194.38.20.2;194.38.20.2;194.38.20.2;malicioso;S;S;S;111.4;103.8;2;CIRCL;S;;
+E014;positivo exato;-;Dominio;consulta DNS careflrst.com;careflrst.com;careflrst.com;malicioso;S;S;S;77.6;82.9;10;CthulhuSPRL.be;S;;
+E015;positivo exato;-;URL;HTTP GET 91.232.29.83/sdfsgsdsdssdf/gate.php;91.232.29.83/sdfsgsdsdssdf/gate.php;91.232.29.83/sdfsgsdsdssdf/gate.php;malicioso;S;S;S;76.8;115.9;11;CIRCL;S S;;
+E016;positivo exato;-;IP;conexao 192.168.0.10 -> 37.77.150.95;37.77.150.95;37.77.150.95;malicioso;S;S;S;109.7;102.6;1;Krawczyk Industries Limited;S;;
+E017;positivo exato;-;Dominio;consulta DNS logmeinrescue.us.com;logmeinrescue.us.com;logmeinrescue.us.com;malicioso;S;S;N;76.2;84.3;11;CIRCL;S;Top 10K most-used sites from Tranco;Top 10K most-used sites from Tranco
+E018;positivo exato;-;URL;HTTP GET friltopyes.com/nothcal/gate.php;friltopyes.com/nothcal/gate.php;friltopyes.com/nothcal/gate.php;malicioso;S;S;S;77.1;78.5;11;CIRCL;S S;;
+E019;positivo exato;-;IP;conexao 192.168.0.10 -> 91.232.29.83;91.232.29.83;91.232.29.83;malicioso;S;S;S;103.6;124.5;11;CIRCL;S;;
+E020;positivo exato;-;Dominio;consulta DNS ssl-vait.com;ssl-vait.com;ssl-vait.com;malicioso;S;S;S;75.8;88.7;10;CthulhuSPRL.be;S;;
+E021;positivo com variacao;IP com porta;IP;conexao 192.168.0.10 -> 91.202.233.104:443;91.202.233.104:443;91.202.233.104;malicioso;N;S;S;71.3;100.6;1;Krawczyk Industries Limited;S;;
+E022;positivo com variacao;nome DNS em maiusculas com ponto final;Dominio;consulta DNS GIFAS.BLOGSITE.ORG.;GIFAS.BLOGSITE.ORG.;gifas.blogsite.org;malicioso;N;S;S;72.9;79.4;10;CthulhuSPRL.be;S;;
+E023;positivo com variacao;URL com host em maiusculas;URL;HTTP GET 179.43.160.34/wp-content/temp/gate.php;179.43.160.34/wp-content/temp/gate.php;179.43.160.34/wp-content/temp/gate.php;malicioso;S;S;S;77.0;114.4;11;CIRCL;S S;;
+E024;positivo com variacao;IP com porta;IP;conexao 192.168.0.10 -> 78.153.140.60:80;78.153.140.60:80;78.153.140.60;malicioso;N;S;S;69.6;101.7;2;CIRCL;S;;
+E025;positivo com variacao;dominio dentro de URL;Dominio;HTTP GET http://prennera.com/index.php;http://prennera.com/index.php;prennera.com;malicioso;N;S;S;73.4;78.0;10;CthulhuSPRL.be;S;;
+E026;positivo com variacao;URL com host em maiusculas;URL;HTTP GET http://ANONFILE.XYZ/f/7f58d7dddec4b72bab0fb27cd852593e.exe;http://ANONFILE.XYZ/f/7f58d7dddec4b72bab0fb27cd852593e.exe;http://anonfile.xyz/f/7f58d7dddec4b72bab0fb27cd852593e.exe;malicioso;S;S;S;76.1;76.0;14;CIRCL;S;;
+E027;positivo com variacao;IP com porta;IP;conexao 192.168.0.10 -> 193.24.123.69:8080;193.24.123.69:8080;193.24.123.69;malicioso;N;S;S;79.4;100.5;1;Krawczyk Industries Limited;S;;
+E028;positivo com variacao;nome DNS em maiusculas com ponto final;Dominio;consulta DNS CAREF1RST.COM.;CAREF1RST.COM.;caref1rst.com;malicioso;N;S;S;73.7;76.6;10;CthulhuSPRL.be;S;;
+E029;positivo com variacao;URL com host em maiusculas;URL;HTTP GET MILLIONJAM.EU/megastock/gate.php;MILLIONJAM.EU/megastock/gate.php;millionjam.eu/megastock/gate.php;malicioso;S;S;S;78.0;77.5;11;CIRCL;S S;;
+E030;positivo com variacao;IP com porta;IP;conexao 192.168.0.10 -> 78.153.140.199:53;78.153.140.199:53;78.153.140.199;malicioso;N;S;S;72.3;114.2;2;CIRCL;S;;
+E031;positivo com variacao;dominio dentro de URL;Dominio;HTTP GET http://vpn.we11point.com/index.php;http://vpn.we11point.com/index.php;vpn.we11point.com;malicioso;N;S;S;73.0;77.7;10;CthulhuSPRL.be;S;;
+E032;positivo com variacao;URL com host em maiusculas;URL;HTTP GET SEATRIP888.EU/gate.php;SEATRIP888.EU/gate.php;seatrip888.eu/gate.php;malicioso;S;S;S;81.3;80.9;11;CIRCL;S S;;
+E033;positivo com variacao;IP com porta;IP;conexao 192.168.0.10 -> 194.38.20.2:22;194.38.20.2:22;194.38.20.2;malicioso;N;S;S;71.5;107.7;2;CIRCL;S;;
+E034;positivo com variacao;nome DNS em maiusculas com ponto final;Dominio;consulta DNS CAREFLRST.COM.;CAREFLRST.COM.;careflrst.com;malicioso;N;S;S;72.3;76.2;10;CthulhuSPRL.be;S;;
+E035;positivo com variacao;URL com host em maiusculas;URL;HTTP GET 91.232.29.83/sdfsgsdsdssdf/gate.php;91.232.29.83/sdfsgsdsdssdf/gate.php;91.232.29.83/sdfsgsdsdssdf/gate.php;malicioso;S;S;S;76.7;105.6;11;CIRCL;S S;;
+E036;positivo com variacao;IP com porta;IP;conexao 192.168.0.10 -> 37.77.150.95:443;37.77.150.95:443;37.77.150.95;malicioso;N;S;S;69.9;114.4;1;Krawczyk Industries Limited;S;;
+E037;positivo com variacao;dominio dentro de URL;Dominio;HTTP GET http://logmeinrescue.us.com/index.php;http://logmeinrescue.us.com/index.php;logmeinrescue.us.com;malicioso;N;S;N;72.7;77.9;11;CIRCL;S;Top 10K most-used sites from Tranco;Top 10K most-used sites from Tranco
+E038;positivo com variacao;URL com host em maiusculas;URL;HTTP GET FRILTOPYES.COM/nothcal/gate.php;FRILTOPYES.COM/nothcal/gate.php;friltopyes.com/nothcal/gate.php;malicioso;S;S;S;81.7;83.6;11;CIRCL;S S;;
+E039;positivo com variacao;IP com porta;IP;conexao 192.168.0.10 -> 91.232.29.83:80;91.232.29.83:80;91.232.29.83;malicioso;N;S;S;76.3;137.2;11;CIRCL;S;;
+E040;positivo com variacao;nome DNS em maiusculas com ponto final;Dominio;consulta DNS SSL-VAIT.COM.;SSL-VAIT.COM.;ssl-vait.com;malicioso;N;S;S;73.3;80.2;10;CthulhuSPRL.be;S;;
+E041;negativo;-;IP;conexao 192.168.0.10 -> 8.8.8.8;8.8.8.8;-;benigno;N;N;N;72.4;72.5;;;;;List of known IPv4 public DNS resolvers
+E042;negativo;-;IP;conexao 192.168.0.10 -> 8.8.4.4;8.8.4.4;-;benigno;N;N;N;80.3;84.3;;;;;List of known IPv4 public DNS resolvers
+E043;negativo;-;IP;conexao 192.168.0.10 -> 1.1.1.1;1.1.1.1;-;benigno;N;N;N;75.8;73.4;;;;;List of known IPv4 public DNS resolvers
+E044;negativo;-;IP;conexao 192.168.0.10 -> 1.0.0.1;1.0.0.1;-;benigno;N;N;N;95.0;79.7;;;;;List of known IPv4 public DNS resolvers
+E045;negativo;-;IP;conexao 192.168.0.10 -> 9.9.9.9;9.9.9.9;-;benigno;N;N;N;77.1;86.0;;;;;List of known IPv4 public DNS resolvers
+E046;negativo;-;IP;conexao 192.168.0.10 -> 208.67.222.222;208.67.222.222;-;benigno;N;N;N;78.8;78.8;;;;;List of known IPv4 public DNS resolvers
+E047;negativo;-;IP;conexao 192.168.0.10 -> 192.168.0.1;192.168.0.1;-;benigno;N;N;N;75.2;75.1;;;;;List of RFC 1918 CIDR blocks / List of RFC 5735 CIDR blocks
+E048;negativo;-;IP;conexao 192.168.0.10 -> 192.168.1.1;192.168.1.1;-;benigno;N;N;N;71.5;71.1;;;;;List of RFC 1918 CIDR blocks / List of RFC 5735 CIDR blocks
+E049;negativo;-;IP;conexao 192.168.0.10 -> 10.0.0.1;10.0.0.1;-;benigno;N;N;N;80.2;74.1;;;;;List of RFC 1918 CIDR blocks / List of RFC 5735 CIDR blocks
+E050;negativo;-;IP;conexao 192.168.0.10 -> 127.0.0.1;127.0.0.1;-;benigno;N;N;N;72.6;107.9;;;;;List of RFC 5735 CIDR blocks
+E051;negativo;-;Dominio;consulta DNS google.com;google.com;-;benigno;N;N;N;85.0;72.4;;;;;Top 10K most-used sites from Tranco / Top 5,000 domains from Cloudflare Radar
+E052;negativo;-;Dominio;consulta DNS www.google.com;www.google.com;-;benigno;N;N;N;70.6;76.1;;;;;Top 10K most-used sites from Tranco
+E053;negativo;-;Dominio;consulta DNS microsoft.com;microsoft.com;-;benigno;N;N;N;74.2;72.5;;;;;Top 10K most-used sites from Tranco / Top 5,000 domains from Cloudflare Radar
+E054;negativo;-;Dominio;consulta DNS windowsupdate.com;windowsupdate.com;-;benigno;N;N;N;71.5;73.5;;;;;Top 10K most-used sites from Tranco / Top 5,000 domains from Cloudflare Radar
+E055;negativo;-;Dominio;consulta DNS wikipedia.org;wikipedia.org;-;benigno;N;N;N;94.0;91.7;;;;;Top 10K most-used sites from Tranco / Top 5,000 domains from Cloudflare Radar
+E056;negativo;-;Dominio;consulta DNS youtube.com;youtube.com;-;benigno;N;N;N;122.5;98.0;;;;;Top 10K most-used sites from Tranco / Top 5,000 domains from Cloudflare Radar
+E057;negativo;-;Dominio;consulta DNS whatsapp.com;whatsapp.com;-;benigno;N;N;N;99.4;80.6;;;;;Top 10K most-used sites from Tranco / Top 5,000 domains from Cloudflare Radar
+E058;negativo;-;Dominio;consulta DNS instagram.com;instagram.com;-;benigno;N;N;N;74.6;71.4;;;;;Top 10K most-used sites from Tranco / Top 5,000 domains from Cloudflare Radar
+E059;negativo;-;Dominio;consulta DNS github.com;github.com;-;benigno;N;N;N;74.7;78.1;;;;;Top 10K most-used sites from Tranco / Top 5,000 domains from Cloudflare Radar
+E060;negativo;-;Dominio;consulta DNS ubuntu.com;ubuntu.com;-;benigno;N;N;N;72.6;73.0;;;;;Top 10K most-used sites from Tranco / Top 5,000 domains from Cloudflare Radar
+E061;negativo;-;Dominio;consulta DNS gov.br;gov.br;-;benigno;N;N;N;71.1;74.9;;;;;
+E062;negativo;-;Dominio;consulta DNS www.gov.br;www.gov.br;-;benigno;N;N;N;71.2;70.6;;;;;Top 10K most-used sites from Tranco
+E063;negativo;-;Dominio;consulta DNS uol.com.br;uol.com.br;-;benigno;N;N;N;82.5;71.6;;;;;Top 10K most-used sites from Tranco / Top 5,000 domains from Cloudflare Radar
+E064;negativo;-;Dominio;consulta DNS globo.com;globo.com;-;benigno;N;N;N;71.4;71.7;;;;;Top 10K most-used sites from Tranco / Top 5,000 domains from Cloudflare Radar
+E065;negativo;-;Dominio;consulta DNS mercadolivre.com.br;mercadolivre.com.br;-;benigno;N;N;N;71.1;71.0;;;;;Top 10K most-used sites from Tranco / Top 5,000 domains from Cloudflare Radar
+E066;negativo;-;Dominio;consulta DNS bb.com.br;bb.com.br;-;benigno;N;N;N;68.9;79.8;;;;;Top 10K most-used sites from Tranco / Top 5,000 domains from Cloudflare Radar
+E067;negativo;-;Dominio;consulta DNS office.com;office.com;-;benigno;N;N;N;71.1;72.0;;;;;Top 10K most-used sites from Tranco / Top 5,000 domains from Cloudflare Radar
+E068;negativo;-;Dominio;consulta DNS cloudflare.com;cloudflare.com;-;benigno;N;N;N;69.5;72.6;;;;;Top 10K most-used sites from Tranco / Top 5,000 domains from Cloudflare Radar
+E069;negativo;-;Dominio;consulta DNS unifagoc.edu.br;unifagoc.edu.br;-;benigno;N;N;N;71.2;73.2;;;;;
+E070;negativo;-;Dominio;consulta DNS misp-project.org;misp-project.org;-;benigno;N;N;N;72.4;76.0;;;;;
+E071;negativo;-;URL;HTTP GET https://www.google.com/;https://www.google.com/;-;benigno;N;N;N;75.0;72.1;;;;;Top 10K most-used sites from Tranco
+E072;negativo;-;URL;HTTP GET https://www.gov.br/pt-br;https://www.gov.br/pt-br;-;benigno;N;N;N;70.7;71.7;;;;;Top 10K most-used sites from Tranco
+E073;negativo;-;URL;HTTP GET https://github.com/MISP/MISP;https://github.com/MISP/MISP;-;benigno;N;N;N;70.7;69.7;;;;;Top 10K most-used sites from Tranco / Top 5,000 domains from Cloudflare Radar
+E074;negativo;-;URL;HTTP GET https://www.unifagoc.edu.br/;https://www.unifagoc.edu.br/;-;benigno;N;N;N;69.2;77.2;;;;;
